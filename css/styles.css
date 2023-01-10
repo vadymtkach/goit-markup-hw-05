@@ -97,6 +97,11 @@ button{
     border: 1px solid #E7E9FC;
     border-radius: 4px;
 
+    
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 
 
 
@@ -234,6 +239,9 @@ button{
         padding-bottom: 24px;
         display: block;
 
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -255,11 +263,28 @@ button{
 .auth-nav .item:last-child{
     margin-right: 0;
 }
+.link-current{
+    color: #404BBF;
+}
+
+.link-current::after{
+        position: relative;
+        content: "";
+        display: block;
+        bottom: -24px;
+        
+        left: 0;
+        height: 4px;
+        border-radius: 2px;
+        background-color: #404BBF;
+}
+    
 
 
 
 
 .contacts{
+    
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -269,6 +294,10 @@ button{
     color: var(--navy-blue);
     padding-top: 24px;
     padding-bottom: 24px;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -295,6 +324,10 @@ button{
     text-align: center;
     border: 0;
     
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 
 
 }
@@ -409,17 +442,89 @@ button{
     border-bottom: 0.5px solid #F4F4FD;
     border-right: 0.5px solid #F4F4FD;
     border-left: 0.5px solid #F4F4FD;
+    
 }
 .pro-card-link{
     display: block;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    
+    
+
+    
 }
 .pro-card-link:hover{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+
 }
 .pro-card-link:focus{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+
+
+.pro-thumb{
+    position: relative;
+    overflow: hidden;
+  
+    
+}
+.pro-thumb:hover .pro-action-text{
+    opacity: 1;
+    
+}
+.pro-thumb:hover::before{
+    opacity: 1;
+}
+.pro-overlay{
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+
+    
+
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+.pro-card-item:hover .pro-overlay{
+    transform: translateY(0%);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.pro-card-link:focus .pro-overlay{
+    transform: translateY(0%);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.pro-action-text{
+    position: absolute;
+    bottom: 164px;
+    left: 32px;
+    
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    width: 296px;
+    height: 96px;
+
+    /* opacity: 0; */
+    color: var(--light-cloud);
+
+    
+}
+
+
+
+
 .our-mission-item{
     font-weight: 700;
     font-size: 20px;
@@ -504,6 +609,10 @@ button{
     padding-bottom: 12px;
     padding-left: 12px;
     padding-right: 12px;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .team-link-list:hover{
@@ -526,11 +635,17 @@ button{
     margin-right: -24px;
     margin-bottom: -48px;
 
+    
+
    
 }
+
+
 .project-cards a{
     text-decoration: none;
     color: var(--navy-blue);
+    
+    
 }
 .pro-card-item{
     
@@ -541,6 +656,9 @@ button{
 
    
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+    overflow: hidden;
+    
+    
     
 }
 .customers{
@@ -573,6 +691,10 @@ button{
 
     background-color: #fff;
     fill: #8E8F99;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .customers-link:hover{
@@ -686,6 +808,10 @@ footer{
     padding-bottom: 8px;
     padding-left: 8px;
     padding-right: 8px;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-link-list:hover{
     background-color: #31D0AA;
@@ -705,8 +831,57 @@ footer{
     font-size: 16px;
     line-height: 1.5;
     
-   
-
-    
 }
 
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(46, 47, 66, 0.4);
+
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+}
+.backdrop.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden .modal{
+    transform: translate(-50%, -50%) scale(1.1);
+}
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    width: 408px;
+    height: 576px;
+
+    background-color: #FCFCFC;
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+}
+
+.button-modal{
+    width: 24px;
+    height: 24px;
+    
+    bottom: 528px;
+    left:360px;
+   
+    background-color: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    position: absolute;
+
+}

@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">  
     <link rel="stylesheet" href="./css/styles.css">
+    
+    
 </head>
 <body>
 
@@ -18,7 +20,7 @@
                     <a href="" class="header-logo"><span>WEB</span>STUDIO</a>
             
                     <ul class="site-nav">
-                        <li class="item"><a class="nav-link" href="./index.html">Studio</a></li>
+                        <li class="item"><a class="nav-link link-current" href="./index.html">Studio</a></li>
                         <li class="item"><a class="nav-link" href="./portfolio.html">Portfolio</a></li>
                         <li class="item"><a class="nav-link" href="">Contacts</a></li>
                         
@@ -47,7 +49,7 @@
               
                 <h1 class="hero-tittle">Effective Solutions<br>for Your Business</h1>
 
-                <button class="button-hero" type="button">Order Service</button>
+                <button class="button-hero" type="button" data-modal-open>Order Service</button>
             
                 
                 
@@ -409,7 +411,17 @@
         
     </footer>
 
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="button-modal" type="button" data-modal-close>
+                <svg width="8" height="8">
+                    <use href="./images/symbol-defs.svg#close-modal"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
 
+    <script src="./js/modal.js"></script>
     
 </body>
 </html>
